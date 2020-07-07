@@ -1,0 +1,196 @@
+/* задаємо css-змінні */
+:root {
+  --main-font: 'Roboto', sans-serif;
+
+  --title-dark-theme-color: #ffffff;
+  --title-light-theme-color: #212121;
+  --text-dark-theme-color: rgba(255, 255, 255, 0.6);
+  --text-light-theme-color: #757575;
+  --accent-color: #2196f3;
+}
+
+/* для body можна не задавати клас, а звернутися по імені тега */
+.page {
+  background-color: #ffffff;
+  font-family: var(--main-font);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--text-light-theme-color);
+}
+
+/* в html додаємо link до посилань, де потрібно забрати підкреслення */
+.link {
+  text-decoration: none;
+}
+
+/* в html додаємо утиліту list до списків, де потрібно забрати маркер */
+.list {
+  list-style: none;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: #000000;
+}
+
+.logo .accent {
+  color: var(--accent-color);
+}
+
+/* Navigation */
+.site-nav .link,
+.header-connect .link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link {
+  color: var(--title-light-theme-color);
+}
+
+.header-connect .link {
+  color: var(--text-light-theme-color);
+}
+
+/* в html додаємо додатковий клас current для активної сторінки */
+.site-nav .link.current,
+.site-nav .link:hover,
+.site-nav .link:focus,
+.header-connect .link:hover,
+.header-connect .link:focus {
+  color: var(--accent-color);
+}
+
+/* Hero */
+/* =============================================================
+ background-color задано тимчасово, щоб було видно білий шрифт
+============================================================= */
+.hero .hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--title-dark-theme-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--title-dark-theme-color);
+  background-color: var(--accent-color);
+}
+
+/* Sections */
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--title-light-theme-color);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-light-theme-color);
+}
+
+.text {
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+/* What we do */
+/* =============================================================
+ background-color задано тимчасово, щоб було видно білий шрифт
+============================================================= */
+.what-we-do-section .title {
+  text-align: center;
+  color: var(--title-dark-theme-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+/* Our team */
+.team-section .team-member {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--title-light-theme-color);
+}
+
+.team-section .position {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+/* Footer */
+/* =============================================================
+ background-color задано тимчасово, щоб було видно білий шрифт
+============================================================= */
+.footer {
+  background-color: #2f303a;
+}
+
+.footer .logo {
+  color: var(--title-dark-theme-color);
+}
+
+.footer-address .link {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+  color: var(--text-dark-theme-color);
+}
+
+.footer .footer-map {
+  color: var(--title-dark-theme-color);
+}
+
+.footer .title {
+  color: var(--title-dark-theme-color);
+}
+
+/* Сторінка Портфоліо */
+
+.portfolio-section .title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+.portfolio-section .text {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--text-light-theme-color);
+}
+
+.portfolio-section .button {
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  color: var(--title-light-theme-color);
+  background-color: #f5f4fa;
+}
+
+.portfolio-section .button:focus,
+.portfolio-section .button:hover,
+.portfolio-section .button:active {
+  color: var(--title-dark-theme-color);
+  background-color: var(--accent-color);
+}
