@@ -322,6 +322,13 @@ img {
   height: 90px;
 }
 
+.clients .clients-list-link:hover,
+.clients .clients-list-link:active,
+.clients .clients-list-link:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
 /* Footer */
 /* =============================================================
  background-color задано тимчасово, щоб було видно білий шрифт
