@@ -48,6 +48,8 @@ h1 {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Утиліти */
@@ -62,6 +64,17 @@ img {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -71,9 +84,14 @@ img {
 }
 
 /* Header */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header .container {
   display: flex;
   justify-content: space-between;
+  /* замість justify-content можна задати margin-left: auto для списку з e-mail та телефоном */
   align-items: center;
 }
 
@@ -252,6 +270,10 @@ img {
   display: flex;
 }
 
+.what-we-do .list-item {
+  width: calc((100% - 60px) / 3);
+}
+
 .what-we-do .title {
   padding: 27px 15px;
 
@@ -270,8 +292,12 @@ img {
 }
 
 .team .list-item {
+  width: calc((100% - 90px) / 4);
+  padding-bottom: 24px;
+
   background: var(--title-dark-theme-color);
   border-radius: 0px 0px 4px 4px;
+  text-align: center;
 }
 
 .team .team-image {
@@ -284,7 +310,6 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   color: var(--title-light-theme-color);
 }
 
@@ -294,12 +319,10 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 .team .social-links {
   justify-content: center;
-  margin-bottom: 24px;
 }
 
 .social-links-item:not(:last-child) {
@@ -393,27 +416,27 @@ img {
   margin-right: 8px;
 }
 
-.portfolio .carts {
+.portfolio .card {
   display: flex;
   flex-wrap: wrap;
 }
 
-.portfolio .carts-item {
+.portfolio .card-item {
   width: calc((100% - 60px) / 3);
   /* width: 370px; */
 }
 
-.portfolio .carts-item-text {
+.portfolio .card-content {
   border: 1px solid #eeeeee;
   border-top: none;
   padding: 20px 24px;
 }
 
-.portfolio .carts-item:not(:nth-child(3n)) {
+.portfolio .card-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 
-.portfolio .carts-item:not(:nth-last-child(-n + 3)) {
+.portfolio .card-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
 
